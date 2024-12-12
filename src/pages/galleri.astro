@@ -1,0 +1,12 @@
+---
+
+
+
+const url = "https://hvqqqwpdmwotjgxebrxv.supabase.co/rest/v1/someotherwaves";
+const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2cXFxd3BkbXdvdGpneGVicnh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU2MDY4NzQsImV4cCI6MjA0MTE4Mjg3NH0.K9dKO1K4NQBdSCsqBZHh1Yc4L8VNHDBNgRCzsI0fSSQ";
+const data = await fetch(url, {
+  headers: {
+    apikey: apiKey
+  }
+}).then(res=>res.json())
+---
