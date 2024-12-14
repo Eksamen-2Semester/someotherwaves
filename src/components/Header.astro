@@ -1,14 +1,16 @@
 <header>
 <div class="logo">
     <a href="/index.astro">
-        <img src="/public/svg/sow_logo.svg" alt="Logo">
+        <img class="desktop_logo" src="/public/svg/sow_logo.svg" alt="Logo">
+        <img class="mobile_logo" src="/public/svg/sow_logo_mobile.svg" alt="Logo">
     </a>
 </div>
 <nav>
     <ul class="menu">
         <li><a href="/galleri">Galleri</a></li>
-        <li><a href="/omos">Om Os</a></li>
+        <li><a href="/omos">Om os</a></li>
         <li><a href="/bestillingsguide">Bestillingsguide</a></li>
+        <li> <img src="/public/svg/insta.svg" alt="instagram"></li>
     </ul>
     <div class="burger">
         <div class="line"></div>
@@ -27,12 +29,16 @@ header {
   align-items: center;
   padding: 20px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  background-color: var(--purple);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .logo img {
   width: 100px;
   height: 97px;
+}
+
+.mobile_logo{
+  display: none;
 }
 
 nav {
@@ -42,6 +48,7 @@ nav {
 
 .menu {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -58,7 +65,7 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #333;
+  color: var(--purple) !important;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -85,7 +92,20 @@ nav {
   display: none;
 }
 /* ----- Moblile ----- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .desktop_logo{
+    display: none;
+  }
+  .mobile_logo{
+    display: block;
+  }
+  .logo img{
+    width: 50px;
+    height: 46px;
+  }
+  header{
+    background-color: var(--purple);
+  }
   .menu {
     display: none;
   }
@@ -109,12 +129,16 @@ nav {
   }
 
   nav.active .menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--purple);
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     width: 100%;
+    height: 250px;
     z-index: 1;
   }
 
