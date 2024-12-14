@@ -1,7 +1,8 @@
 <header>
 <div class="logo">
     <a href="/index.astro">
-        <img src="/svg/sow_logo.svg" alt="Logo">
+        <img class="desktop_logo" src="/public/svg/sow_logo.svg" alt="Logo">
+        <img class="mobile_logo" src="/public/svg/sow_logo_mobile.svg" alt="Logo">
     </a>
 </div>
 <nav>
@@ -27,12 +28,16 @@ header {
   align-items: center;
   padding: 20px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  background-color: var(--purple);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .logo img {
   width: 100px;
   height: 97px;
+}
+
+.mobile_logo{
+  display: none;
 }
 
 nav {
@@ -85,7 +90,20 @@ nav {
   display: none;
 }
 /* ----- Moblile ----- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .desktop_logo{
+    display: none;
+  }
+  .mobile_logo{
+    display: block;
+  }
+  .logo img{
+    width: 50px;
+    height: 46px;
+  }
+  header{
+    background-color: var(--purple);
+  }
   .menu {
     display: none;
   }
@@ -109,12 +127,16 @@ nav {
   }
 
   nav.active .menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--purple);
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     width: 100%;
+    height: 250px;
     z-index: 1;
   }
 
