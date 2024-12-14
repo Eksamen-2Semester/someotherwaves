@@ -1,0 +1,110 @@
+<h1>Hør fra vores kunder</h1>
+<div class="banner">
+  <div class="div-container">
+    <div class="div_1-1">
+      <img src="/public/img/wall/wall_08.webp" alt="review billede" />
+      <p>"Hver gang jeg træder ind i mit køkken og ser væggen over håndvasken, bliver jeg glad på ny!"</p>
+    </div>
+    <div class="div_1-1">
+      <img src="/public/img/wall/wall_09.webp" alt="review billede" />
+      <p>"Jeg elsker, hvordan væggen giver en hyggelig stemning i stuen!"</p>
+    </div>
+    <div class="div_1-1">
+      <img src="/public/img/wall/wall_10.webp" alt="review billede" />
+      <p>"Det var den bedste beslutning at vælge dette design til mit hjem!"</p>
+    </div>
+  </div>
+  <div class="arrow">
+    <img id="leftArrow" src="/public/svg/arrow.svg" alt="pil" />
+    <img id="rightArrow" class="s180grader" src="/public/svg/arrow.svg" alt="pil" />
+  </div>
+</div>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Skjuler indhold uden for containeren */
+  }
+
+  .div-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Gør animationen glidende */
+    width: 300%; /* Tre elementer à 100% bredde */
+  }
+
+  .div_1-1 {
+    flex: -1 0 40%; /* Sørger for, at hver sektion fylder hele bredden */
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .div_1-1 img {
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  .div_1-1 p {
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .arrow {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(-50%);
+  }
+
+  .arrow img {
+    cursor: pointer;
+    width: 40px;
+    height: auto;
+  }
+
+  .s180grader {
+    transform: scaleX(-1);
+  }
+</style>
+
+<script>
+  // Elementer
+  const divContainer = document.querySelector(".div-container");
+  const leftArrow = document.getElementById("leftArrow");
+  const rightArrow = document.getElementById("rightArrow");
+  const divs = document.querySelectorAll(".div_1-1");
+
+  // Variabler
+  let currentIndex = 0; // Start ved det første element
+  const totalDivs = divs.length;
+
+  // Funktion til at opdatere bannerposition
+  function updateBanner() {
+    const offset = -currentIndex * 33; // Beregner position
+    divContainer.style.transform = `translateX(${offset}%)`;
+  }
+
+  // Klik-handlinger for pile
+  leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalDivs) % totalDivs; // Gå til forrige
+    updateBanner();
+  });
+
+  rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalDivs; // Gå til næste
+    updateBanner();
+  });
+
+  // Initialisering: Sørger for, at det første element vises korrekt
+  updateBanner();
+</script>
