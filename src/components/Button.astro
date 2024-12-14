@@ -2,40 +2,37 @@
 export const href = "/";
 ---
 
-<button>
-  <a href={href} class="destination">
-    <slot />
-  </a>
-</button>
+<a href={href} class="destination">
+  <slot />
+  
+</a>
 
 <style>
-  button {
+  .destination {
+    display: inline-block;
     background-color: var(--red);
     border-radius: 50px;
     border: 2px solid var(--red);
     padding: 10px 45px;
     cursor: pointer;
-  }
-
-  button:hover {
-    background-color: var(--neutral); /* Ændrer baggrundsfarven */
-  }
-
-  button:hover a.destination {
-    color: var(--red) !important; /* Ændrer farven på teksten */
-  }
-
-  a.destination {
-    color: white !important; /* Standard farve på teksten */
     text-decoration: none;
+    color: white !important;
     font-family: "Source Sans 3", sans-serif;
     font-weight: bold;
     font-size: 12px;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  .destination:hover {
+    background-color: var(--neutral);
+    color: var(--red) !important;
   }
 
   @media (min-width: 1000px) {
-    button {
-      font-size: 12px;
+    .destination {
+      font-size: 16px;
     }
   }
 </style>
