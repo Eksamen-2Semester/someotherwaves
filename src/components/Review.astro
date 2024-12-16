@@ -2,16 +2,16 @@
 <div class="banner">
   <div class="div-container">
     <div class="div_1-1">
-      <img src="/public/img/wall/wall_08.webp" alt="review billede" />
-      <p>"Hver gang jeg træder ind i mit køkken og ser væggen over håndvasken, bliver jeg glad på ny!"</p>
+      <img src="/img/wall/wall_08.webp" alt="review billede" />
+      <p>"Hver gang jeg træder ind i mit køkken og ser de flotte mønstre, bliver jeg glad på ny!"</p>
     </div>
     <div class="div_1-1">
-      <img src="/public/img/wall/wall_09.webp" alt="review billede" />
-      <p>"Jeg elsker, hvordan væggen giver en hyggelig stemning i stuen!"</p>
+      <img src="/img/wall/wall_09.webp" alt="review billede" />
+      <p>"Jeg elsker at vise min væg frem, og man kan ikke komme på besøg hos mig uden at få den vist."</p>
     </div>
     <div class="div_1-1">
-      <img src="/public/img/wall/wall_10.webp" alt="review billede" />
-      <p>"Det var den bedste beslutning at vælge dette design til mit hjem!"</p>
+      <img src="/img/wall/wall_10.webp" alt="review billede" />
+      <p>"Kæmpe anbefaling herfra! Super nem process med at få de skønne piger ud i vores sommerhus og få frisket de gamle vægge lidt op."</p>
     </div>
   </div>
   <div class="arrow">
@@ -23,6 +23,7 @@
 <style>
   h1 {
     text-align: center;
+    font-weight: 100;
   }
 
   .banner {
@@ -54,7 +55,7 @@
   .div_1-1 p {
     padding: 10px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .arrow {
@@ -79,6 +80,40 @@
     }
     .arrow span:hover {
       transform: scale(1.5);
+    }
+
+    .banner {
+      position: relative;
+      width: 50%;
+      overflow: hidden; /* Skjuler indhold uden for containeren */
+      margin: auto;
+    }
+
+    .div-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out; /* Gør animationen glidende */
+      width: 300%; /* Tre elementer à 100% bredde */
+    }
+
+    .div_1-1 {
+      flex: -1 0 40%; /* Sørger for, at hver sektion fylder hele bredden */
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      align-items: start;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .div_1-1 img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .div_1-1 p {
+      font-weight: 600;
+      font-size: 20px;
     }
   }
 
