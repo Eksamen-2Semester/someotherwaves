@@ -48,7 +48,7 @@
   }
 
   .div_1-1 img {
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
   }
 
@@ -64,7 +64,9 @@
     display: flex;
     justify-content: space-evenly;
     transform: translateY(-50%);
+    margin-bottom: 20px;
   }
+
   .arrow span {
     cursor: pointer;
     font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
@@ -91,7 +93,6 @@
     .div_1-1 {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      align-items: start;
       justify-content: center;
       padding: 20px;
       box-sizing: border-box;
@@ -110,6 +111,17 @@
   .s180grader {
     transform: rotateY(180deg);
   }
+
+  @media (min-width: 800px) {
+  .arrow {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(-50%);
+    margin-bottom: 200px;
+  }
+}
 </style>
 
 <script>
