@@ -2,9 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import Review from "../components/Review.astro";
+import Flag from "../components/Flag.astro";
 ---
 
 <Layout>
+  <video muted autoplay>
+    <source src="video/Alpha_hero-hevc-safari.mp4" type="video/mp4; codecs=hvc1" />
+    <source src="video/Alpha_hero-vp9-chrome.webm" type="video/webm" />
+  </video>
+
   <h1 class="display">Some Other Waves</h1>
   <p class="catchphrase"><b>- evighedskunst i dit hjem -</b></p>
 
@@ -90,9 +96,9 @@ import Review from "../components/Review.astro";
     </div>
   </div>
 
-  <div class="faq_grid">
-    <h1>Spørgsmål og svar</h1>
+  <h1>Spørgsmål og svar</h1>
 
+  <div class="faq_grid">
     <p>
       <b>Hvilken maling maler I med?</b><br />
       Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
@@ -131,6 +137,7 @@ import Review from "../components/Review.astro";
     </p>
     <p><b>Kan man have indflydelse på farver og de motiver I maler?</b><br />Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.</p>
   </div>
+  <Flag />
 </Layout>
 
 <style>
@@ -298,6 +305,8 @@ import Review from "../components/Review.astro";
       align-items: center;
       margin: auto;
       width: 60%;
+
+      margin-bottom: 200px;
     }
 
     .omostekst {
@@ -307,7 +316,7 @@ import Review from "../components/Review.astro";
     .forsidebillede {
       display: block;
       width: 100%;
-margin-top: 30%;
+      margin-top: 30%;
     }
 
     .text-content h1 {
@@ -371,22 +380,35 @@ margin-top: 30%;
     .gallerigrid:hover .grafik {
       transform: none;
     }
-  }
 
-  .grafikstjerne {
-    display: block;
-    position: absolute;
-    width: 25%;
-    z-index: -1;
-    left: 15%;
-  }
+    .grafikstjerne {
+      display: block;
+      position: absolute;
+      width: 25%;
+      z-index: -1;
+      left: 15%;
+    }
 
-  .p2 {
-    max-width: 800px;
-  }
+    .p2 {
+      max-width: 800px;
+    }
 
-  .slide-track {
-    animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
-   
+    .slide-track {
+      animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
+
+    }
+    .faq_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin-top: 90px;
+      margin-bottom: 10px;
+      background-image: url("svg/faq_desktop.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      overflow: visible;
+      
+    }
   }
 </style>
