@@ -29,7 +29,7 @@ const data = await fetch(url, {
         </div>
         <div class="cta">
             <h2>Drømmer du om et<br>evighedskunstværk?</h2>
-            <Button>Se guiden</Button>
+            <Button><a href="/bestillingsguide">Se guiden</a></Button>
         </div>
     </section>
 </Layout>
@@ -83,6 +83,12 @@ const data = await fetch(url, {
 
 
 <style>
+ main{
+    width: 100% !important;
+}
+h1{
+    margin: 30px;
+}
  section{
     display: flex;
     flex-direction: column;
