@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Review from "../components/Review.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
@@ -16,7 +17,7 @@ import Review from "../components/Review.astro";
       </p>
       <img src="/public/img/other/bestillingsguide_01.webp" alt="Carla foran et vægmaleri" />
     </section>
-    <section class="margin50">
+    <section class="margin50 order">
       <p>
         <b> Bemærk venligst: </b><br />
         Vi har en fast kvadratmeterpris og tilføjer eventuelle transportudgifter oveni prisen. <br />
@@ -25,11 +26,11 @@ import Review from "../components/Review.astro";
         <br />
         Vi medbringer og blander selv alle vores farver, som bliver malet med akryl/vægmaling med et EU ecolabel.
       </p>
-      <img src="/public/img/other/bestillingsguide_02.webp" alt="Carla foran et vægmaleri2" />
+      <img class="order" src="/public/img/other/bestillingsguide_02.webp" alt="Carla foran et vægmaleri2" />
     </section>
     <section>
       <h2 class="margin50">Skriv til os på Instagram for at komme igang</h2>
-      <!-- <Button class="margin150"></Button> -->
+      <Button>@Someotherwaves</Button>
     </section>
   </main>
   <style>
@@ -49,11 +50,37 @@ import Review from "../components/Review.astro";
     h2 {
       text-align: center;
     }
+    h1 {
+      text-align: center;
+    }
 
-    @media (min-width: 600px) {
+    @media (min-width: 1000px) {
       main {
-        width: 60%;
+        width: 50%;
         margin: auto;
+      }
+
+      .margin100 {
+        display: flex;
+        margin-bottom: 50px;
+      }
+      .order {
+        display: flex;
+        order: -1;
+        margin-bottom: 25px;
+      }
+      img {
+        width: 45%;
+        height: 40%;
+      }
+      h1 {
+        text-align: center;
+      }
+      .margin50 p {
+        padding-left: 20px;
+      }
+      .margin100 p {
+        padding-right: 20px;
       }
     }
   </style>
