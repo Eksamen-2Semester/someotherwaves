@@ -15,8 +15,8 @@
     </div>
   </div>
   <div class="arrow">
-    <img id="leftArrow" src="/public/svg/arrow.svg" alt="pil" />
-    <img id="rightArrow" class="s180grader" src="/public/svg/arrow.svg" alt="pil" />
+    <span id="leftArrow" class="material-symbols-outlined s180grader"> chevron_right </span>
+    <span id="rightArrow" class="material-symbols-outlined"> chevron_right </span>
   </div>
 </div>
 
@@ -40,7 +40,6 @@
   .div_1-1 {
     flex: -1 0 40%; /* Sørger for, at hver sektion fylder hele bredden */
     display: flex;
-
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -65,15 +64,26 @@
     justify-content: space-evenly;
     transform: translateY(-50%);
   }
-
-  .arrow img {
+  .arrow span {
     cursor: pointer;
-    width: 40px;
-    height: auto;
+    font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
+    color: #f3747b; /* Ændrer farven på pilene */
+  }
+
+  @media (min-width: 600px) {
+    .arrow span {
+      cursor: pointer;
+      font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
+      color: #f3747b; /* Ændrer farven på pilene */
+      transition: transform 0.3s ease;
+    }
+    .arrow span:hover {
+      transform: scale(1.5);
+    }
   }
 
   .s180grader {
-    transform: scaleX(-1);
+    transform: rotateY(180deg);
   }
 </style>
 

@@ -1,40 +1,38 @@
 ---
+// Definerer href som en prop
 export const href = "/";
 ---
 
-<button>
-  <a href={href} class="destination">
-    <slot />
-  </a>
-</button>
+<a href={href} class="button">
+  <slot />
+
+</a>
 
 <style>
-  button {
-    background-color: var(--red);
+  .button {
+    background-color: var(--red) !important;
     border-radius: 50px;
     border: 2px solid var(--red);
-    padding: 10px 40px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: var(--neutral); /* Ændrer baggrundsfarven */
-  }
-
-  button:hover a.destination {
-    color: var(--red) !important; /* Ændrer farven på teksten */
-  }
-
-  a.destination {
-    color: white !important; /* Standard farve på teksten */
+    padding: 10px 45px;
+    color: white !important;
     text-decoration: none;
     font-family: "Source Sans 3", sans-serif;
     font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
   }
 
-  @media (min-width: 769px) {
-    button {
-      font-size: 22px;
+  .button:hover {
+    background-color: var(--neutral) !important;
+    color: var(--red) !important;
+  }
+
+  @media (min-width: 1000px) {
+    .button {
+      font-size: 16px;
     }
   }
 </style>

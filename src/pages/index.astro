@@ -1,9 +1,393 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Review from "../components/Review.astro";
 ---
 
-<Layout> <Button <a href="/omos">Læs mere</Button></Layout>
+<Layout>
+  <h1 class="display">Some Other Waves</h1>
+  <p class="catchphrase"><b>- evighedskunst i dit hjem -</b></p>
+
+  <div class="grid_2">
+    <div class="text-content">
+      <h1 class="omostekst">Om os</h1>
+      <p>Hej! Vi hedder Carla og Bjørk, og er to tvillinger som i 2022 startede med at skabe væg- og loftmalerier under navnet Some Other Waves. Vi laver evighedskunst - en måde at kombinere vores univers med en bæredygtighed der varer hele livet. Havet og dens uendelige mængde af former og farver er vores inspiration, hvilket præger alle vores motiver. <br /> Vi er klar på at male din stue, din gang, din butiksdisk og alt der ligger imellem!</p>
+      <Button><a href="/omos">Læs mere </a></Button>
+    </div>
+    <div>
+      <img class="forsidebillede" src="img/other/portrait_03.webp" alt="CarlaxBjørk" />
+    </div>
+  </div>
+
+  <h1>Galleri</h1>
+
+  <div class="gallerigrid">
+    <div class="image-container">
+      <img src="img/wall/wall_07.webp" alt="Kategori - Vægmalerier" />
+      <div class="text-overlay">Vægmalerier</div>
+    </div>
+
+    <div class="image-container">
+      <img src="img/ceiling/ceiling_01.webp" alt="Kategori - Loftmalerier" />
+      <div class="text-overlay">Loftmalerier</div>
+    </div>
+
+    <img class="grafik" src="svg/gallerigrafik2.svg" alt="Grafik" />
+
+    <div class="image-container">
+      <img src="img/collabs/elefant.webp" alt="Kategori - Samarbejder" />
+      <div class="text-overlay">Samarbejder</div>
+    </div>
+
+    <img class="grafik" src="svg/gallerigrafik1.svg" alt="Grafik" />
+
+    <div class="image-container">
+      <img src="img/products/klint.webp" alt="Kategori - Produkter" />
+      <div class="text-overlay">Produkter</div>
+    </div>
+  </div>
+
+  <div>
+    <img class="grafikstjerne" src="svg/starfish.svg" alt="Grafik - Starfish" />
+    <h1>Drømmer du om et evighedskunstværk?</h1>
+    <p class="p2">Vi stræber efter at skabe kunst som man kan nyde i lang tid og som kan blive en del af ens hverdag. I stedet for at male på lærreder, valgte vi derfor væggen og selve hjemmet som vores udtryksmiddel for vores kunst. At være omgivet af kunst hver dag er noget af det skønneste for os, og det vil vi gerne give videre. <br /> Hvis du har ledt efter en måde at gøre dit hjem mere personligt, farverigt og inspirerende, kan vores væg- og loftmalerier være den perfekte løsning for dig!</p>
+
+    <Button> <a href="/bestillingsguide">Se guiden </a></Button>
+  </div>
+
+  <Review />
+
+  <h1>Brands vi har arbejdet med</h1>
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="public/img/banner/cafeoscar.svg" height="60" width="auto" alt="Cafe Oscar logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/copenhagenoptic.svg" height="60" width="auto" alt="Copenhagen Optic logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/dyrlaegegaaarden.svg" height="60" width="auto" alt="Dyrlægegården logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/gentofte.svg" height="60" width="200" alt="Gentofte logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/gentofteby.svg" height="60" width="auto" alt="Gentofte By logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/humanhouse.svg" height="60" width="auto" alt="Human House logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/klint.svg" height="60" width="auto" alt="Klint logo" />
+        </div>
+        <div class="slide">
+          <img src="public/img/banner/louievenner.svg" height="60" width="auto" alt="Louie & Venner logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq_grid">
+    <h1>Spørgsmål og svar</h1>
+
+    <p>
+      <b>Hvilken maling maler I med?</b><br />
+      Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
+    </p>
+
+    <p>
+      <b>Maler I i hele Danmark?</b><br />
+      Ja, vi tager offentlig transport rundt i hele landet og transportudgifterne kommer oveni den samlede pris. Vi køber de billigste billetter.
+    </p>
+
+    <p>
+      <b>Hvad gør I for at være bæredygtige?</b><br />
+      Vi maler kun på overflader allerede eksisterer, så vores kunst lever længst tid muligt. Derudover maler vi med maling som er certificeret som har mindst mulig belastning på naturen.
+    </p>
+
+    <p>
+      <b>Kan man selv vælge baggrundsfarve?</b><br />
+      Hvis du ønsker en bestemt baggrundsfarve, skal du selv have malet overfladen, inden vi kommer.
+    </p>
+
+    <p>
+      <b>Hvad skal jeg have klar inden I kommer?</b><br />
+      Du skal have dækket gulvet af omkring det sted vi skal male og sørget for stiger/evt. stillads.
+    </p>
+
+    <p>
+      <b>Hvem sørger for materialer?</b><br />
+      Det gør vi selv. Vi medbringer selv maling og pensler.
+    </p>
+
+    <p><b>Maler I også udendørs?</b><br />Nej, vi maler i øjeblikket ikke udendørs evighedskunstværker.</p>
+
+    <p>
+      <b>Hvor lang ventetid er der?</b><br />
+      Du skal kontakte os 1-2 måneder før, så vi kan sætte en dato til af til dig.
+    </p>
+    <p><b>Kan man have indflydelse på farver og de motiver I maler?</b><br />Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.</p>
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+    max-width: 261px;
+    word-wrap: break-word;
+    margin: 0 auto;
+  }
+
+  .p2 {
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+  .catchphrase {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .forsidebillede {
+    display: block;
+    width: 50%;
+    border-radius: 27px 27px 127px 127px;
+    margin: 0 auto;
+  }
+
+  .gallerigrid {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .image-container {
+    position: relative; /* Så vi kan placere teksten ovenpå billedet */
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .gallerigrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+    filter: brightness(70%);
+  }
+
+  .gallerigrid img:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none; /* Forhindrer teksten i at blokere klik */
+    font-family: "Source Sans 3", sans-serif;
+  }
+
+  .grafik {
+    display: none;
+  }
+
+  .grafikstjerne {
+    display: none;
+  }
+
+  .faq_grid {
+    margin-top: 90px;
+    margin-bottom: 10px;
+    background-image: url("svg/faqmobil.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 240px 0;
+  }
+
+  .faq_grid p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+  img {
+    border-radius: 15px;
+  }
+
+  /* Banner */
+
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+  }
+
+  /* Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  /* Styling */
+  .slider {
+    background: var(--neutral);
+    height: 100px;
+    margin: auto;
+    overflow: hidden; /* Sørger for at banneret ikke kan bevæge sig udover skærmbredden */
+    position: relative;
+  }
+
+  .slider::before,
+  .slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 249, 239, 1) 0%, rgba(255, 249, 239, 0) 100%);
+  }
+
+  .slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 249, 239, 1) 0%, rgba(255, 249, 239, 0) 100%);
+  }
+
+  .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Hurtigere bevægelse */
+    gap: 70px;
+  }
+
+  .slide {
+    width: auto;
+  }
+
+  /* Desktop */
+
+  @media (min-width: 1000px) {
+    .grid_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      margin: auto;
+      width: 60%;
+    }
+
+    .omostekst {
+      text-align: start !important;
+    }
+
+    .forsidebillede {
+      display: block;
+      width: 60%;
+      margin-top: 30%;
+    }
+
+    .text-content h1 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .text-content p {
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .gallerigrid {
+      display: grid;
+      width: 75%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .gallerigrid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+      filter: brightness(70%);
+    }
+
+    .gallerigrid img:hover {
+      filter: brightness(100%);
+      transform: scale(1.05);
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      pointer-events: none; /* Forhindrer teksten i at blokere klik */
+    }
+
+    .grafik {
+      display: block;
+      filter: brightness(100%) !important;
+      scale: 70%;
+      overflow: visible;
+    }
+
+    .gallerigrid:hover .grafik {
+      transform: none;
+    }
+  }
+
+  .grafikstjerne {
+    display: block;
+    position: absolute;
+    width: 25%;
+    z-index: -1;
+    left: 15%;
+  }
+
+  .p2 {
+    max-width: 800px;
+  }
+
+  .slide-track {
+    animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
+   
+  }
+</style>

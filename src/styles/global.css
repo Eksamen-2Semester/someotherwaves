@@ -47,7 +47,6 @@ a {
   font-family: "Source Sans 3", sans-serif;
   font-weight: bold;
   text-decoration: none !important;
-  color: var(--red) !important;
 }
 
 /* ----- Desktop Verions ----- */
@@ -58,6 +57,7 @@ a {
 
   h1 {
     font-size: 100px;
+    font-weight: 100;
   }
   h2 {
     font-size: 48px;
