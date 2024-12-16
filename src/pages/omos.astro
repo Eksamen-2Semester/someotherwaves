@@ -15,7 +15,9 @@ import Button from "../components/Button.astro";
       <p><b>Bæredygtighed hos os</b> <br />Begrebet evighedskunst kommer fra vores ønske om at skæbe kunst, som er bæredygtig og holder i længden. Vi maler på ting, som allerede eksisterer i livet, og minimerer derved mængden af resourcer som skal til for at skabe vores værker. I vores samarbejder med brands og virksomheder udvælger vi derfor også dem, som også går ind for bæredygtighed, for at kunne have vores værdier med i alt som vi kreerer. Derudover elsker vi at forskønne områder hvor mennesker samles, passerer og går til hverdag, og nyder derfor også at præge institutioner, kontorer og offentlige steder med vores motiver.</p>
       <img src="/public/img/wall/wall_13.webp" alt="" />
     </div>
-    <Button>Se galleri</Button>
+    <div class="center">
+      <Button>Se galleri</Button>
+    </div>
   </main>
 </Layout>
 
@@ -36,6 +38,11 @@ import Button from "../components/Button.astro";
   }
   p {
     margin-bottom: 25px;
+  }
+  .center {
+    display: flex;
+    align-self: center;
+    justify-content: center;
   }
   @media (min-width: 1000px) {
     main {
