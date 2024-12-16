@@ -30,10 +30,12 @@ import Button from "../components/Button.astro";
     </section>
     <section>
       <h2 class="margin50">Skriv til os på Instagram for at komme igang</h2>
-      <Button><a href="">@Someotherwaves</a></Button>
+      <div class="center"><Button><a href="https://www.instagram.com/someotherwaves/" target="_blank">@Someotherwaves</a></Button></div>
     </section>
   </main>
   <style>
+    .center {
+    }
     img {
       width: 100%;
     }
@@ -55,11 +57,6 @@ import Button from "../components/Button.astro";
     }
 
     @media (min-width: 1000px) {
-      main {
-        width: 50%;
-        margin: auto;
-      }
-
       .margin100 {
         display: flex;
         margin-bottom: 50px;

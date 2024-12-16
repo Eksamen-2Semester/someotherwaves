@@ -54,7 +54,7 @@ import Flag from "../components/Flag.astro";
     </div>
   </div>
 
-  <div>
+  <div class="dromme">
     <img class="grafikstjerne" src="svg/starfish.svg" alt="Grafik - Starfish" />
     <h1>Drømmer du om et evighedskunstværk?</h1>
     <p class="p2">Vi stræber efter at skabe kunst som man kan nyde i lang tid og som kan blive en del af ens hverdag. I stedet for at male på lærreder, valgte vi derfor væggen og selve hjemmet som vores udtryksmiddel for vores kunst. At være omgivet af kunst hver dag er noget af det skønneste for os, og det vil vi gerne give videre. <br /> Hvis du har ledt efter en måde at gøre dit hjem mere personligt, farverigt og inspirerende, kan vores væg- og loftmalerier være den perfekte løsning for dig!</p>
@@ -73,11 +73,13 @@ import Flag from "../components/Flag.astro";
 </Layout>
 
 <style>
-  .video {
- 
+  h1 {
+    z-index: 2;
   }
   h1 {
     text-align: center;
+    z-index: 10; 
+    position: relative;
   }
 
   p {
@@ -158,7 +160,7 @@ import Flag from "../components/Flag.astro";
 
   /* Desktop */
 
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     .grid_2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -166,18 +168,25 @@ import Flag from "../components/Flag.astro";
       align-items: center;
       margin: auto;
       width: 60%;
-
       margin-bottom: 200px;
+    }
+
+    .grid_2 h1 {
+      text-align: start !important;
+      margin: 0;
+      
     }
 
     .omostekst {
       text-align: start !important;
+      margin-right: 20px;
     }
 
     .forsidebillede {
       display: block;
       width: 100%;
       margin-top: 30%;
+      margin-left: 20px;
     }
 
     .text-content h1 {
@@ -192,11 +201,10 @@ import Flag from "../components/Flag.astro";
 
     .gallerigrid {
       display: grid;
-      width: 75%;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       margin: 0 auto;
-      margin-bottom: 100px;
+      margin-bottom: 200px;
     }
 
     .image-container {
@@ -231,6 +239,10 @@ import Flag from "../components/Flag.astro";
       pointer-events: none; /* Forhindrer teksten i at blokere klik */
     }
 
+    .dromme {
+      margin-bottom: 200px;
+    }
+
     .grafik {
       display: block;
       filter: brightness(100%) !important;
@@ -245,17 +257,14 @@ import Flag from "../components/Flag.astro";
     .grafikstjerne {
       display: block;
       position: absolute;
-      width: 25%;
+      width: 20%;
       z-index: -1;
       left: 15%;
+      opacity: 70%;
     }
 
     .p2 {
       max-width: 800px;
-    }
-
-    .slide-track {
-      animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
     }
   }
 </style>
