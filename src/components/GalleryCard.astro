@@ -1,0 +1,19 @@
+---
+const { data } = Astro.props;
+---
+
+<article>
+    <img class={data.category} src={data.image} alt="">
+</article>
+
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 344px;
+      display: block;
+      border-radius: 15px;
+    }
+</style>

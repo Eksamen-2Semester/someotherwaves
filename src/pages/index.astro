@@ -163,7 +163,6 @@ import Review from "../components/Review.astro";
 
   .gallerigrid {
     display: grid;
-    width: 80%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
@@ -201,6 +200,7 @@ import Review from "../components/Review.astro";
     font-size: 24px;
     font-weight: bold;
     pointer-events: none; /* Forhindrer teksten i at blokere klik */
+    font-family: "Source Sans 3", sans-serif;
   }
 
   .grafik {
@@ -280,7 +280,7 @@ import Review from "../components/Review.astro";
 
   .slide-track {
     display: flex;
-    animation: scroll 45s linear infinite; /* Hurtigere bevægelse */
+    animation: scroll 20s linear infinite; /* Hurtigere bevægelse */
     gap: 70px;
   }
 
@@ -296,13 +296,18 @@ import Review from "../components/Review.astro";
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       align-items: center;
-      margin-top: 40px;
+      margin: auto;
+      width: 60%;
+    }
+
+    .omostekst {
+      text-align: start !important;
     }
 
     .forsidebillede {
       display: block;
-      width: 45%;
-      margin-left: 0;
+      width: 100%;
+      margin: 30%;
     }
 
     .text-content h1 {
@@ -317,7 +322,7 @@ import Review from "../components/Review.astro";
 
     .gallerigrid {
       display: grid;
-      width: 60%;
+      width: 75%;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       margin: 0 auto;
@@ -359,6 +364,8 @@ import Review from "../components/Review.astro";
     .grafik {
       display: block;
       filter: brightness(100%) !important;
+      scale: 70%;
+      overflow: visible;
     }
 
     .gallerigrid:hover .grafik {
@@ -376,5 +383,10 @@ import Review from "../components/Review.astro";
 
   .p2 {
     max-width: 800px;
+  }
+
+  .slide-track {
+    animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
+   
   }
 </style>
