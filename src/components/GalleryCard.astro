@@ -3,17 +3,25 @@ const { data } = Astro.props;
 ---
 
 <article>
-    <img class={data.category} src={data.image} alt="">
+    <img class={`${data.category} ${data.class} test`} src={data.image} alt="">
 </article>
 
 <style>
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    img {
-      width: 344px;
-      display: block;
-      border-radius: 15px;
-    }
+*{
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 150px;
+  display: block;
+  border-radius: 15px;
+}
+
+    /* ----- Desktop ----- */
+    @media screen and (min-width: 1000px) {
+  img {
+  min-width: 344px;
+  }
+
+}
 </style>
