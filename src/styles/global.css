@@ -28,6 +28,7 @@ h1 {
   font-family: "RastelyDa";
   font-size: 36px;
   color: var(--purple);
+  margin: 30px;
 }
 
 h2 {
@@ -41,12 +42,24 @@ p {
   font-family: "Source Sans 3", sans-serif;
   font-size: 12px;
   color: var(--purple);
+  margin-bottom: 25px;
 }
 
 a {
   font-family: "Source Sans 3", sans-serif;
   font-weight: bold;
   text-decoration: none !important;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+}
+
+main {
+  width: 75%;
+  margin: auto;
 }
 
 /* ----- Desktop Verions ----- */
@@ -58,6 +71,7 @@ a {
   h1 {
     font-size: 100px;
     font-weight: 100;
+
   }
   h2 {
     font-size: 48px;
