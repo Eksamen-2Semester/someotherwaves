@@ -3,15 +3,15 @@
   <div class="div-container">
     <div class="div_1-1">
       <img src="/img/wall/wall_08.webp" alt="review billede" />
-      <p>"Hver gang jeg træder ind i mit køkken og ser de flotte mønstre, bliver jeg glad på ny!"</p>
+      <p><i>"Hver gang jeg træder ind i mit køkken og ser de flotte mønstre, bliver jeg glad på ny!"</i></p>
     </div>
     <div class="div_1-1">
       <img src="/img/wall/wall_09.webp" alt="review billede" />
-      <p>"Jeg elsker at vise min væg frem, og man kan ikke komme på besøg hos mig uden at få den vist."</p>
+      <p><i> "Jeg elsker at vise min væg frem, og man kan ikke komme på besøg hos mig uden at få den vist."</i></p>
     </div>
     <div class="div_1-1">
       <img src="/img/wall/wall_10.webp" alt="review billede" />
-      <p>"Kæmpe anbefaling herfra! Super nem process med at få de skønne piger ud i vores sommerhus og få frisket de gamle vægge lidt op."</p>
+      <p><i>"Kæmpe anbefaling herfra! Super nem process med at få de skønne piger ud i vores sommerhus og få frisket de gamle vægge lidt op."</i></p>
     </div>
   </div>
   <div class="arrow">
@@ -83,20 +83,12 @@
     }
 
     .banner {
-      position: relative;
-      width: 50%;
-      overflow: hidden; /* Skjuler indhold uden for containeren */
-      margin: auto;
-    }
+      max-width: 600px;
 
-    .div-container {
-      display: flex;
-      transition: transform 0.5s ease-in-out; /* Gør animationen glidende */
-      width: 300%; /* Tre elementer à 100% bredde */
+      margin: 0 auto;
     }
 
     .div_1-1 {
-      flex: -1 0 40%; /* Sørger for, at hver sektion fylder hele bredden */
       display: grid;
       grid-template-columns: 1fr 3fr;
       align-items: start;
@@ -108,11 +100,9 @@
     .div_1-1 img {
       display: block;
       width: 100%;
-      border-radius: 10px;
     }
 
     .div_1-1 p {
-      font-weight: 600;
       font-size: 20px;
     }
   }
