@@ -10,7 +10,7 @@
         <li><a href="/galleri">Galleri</a></li>
         <li><a href="/omos">Om os</a></li>
         <li><a href="/bestillingsguide">Bestillingsguide</a></li>
-        <li> <img src="/svg/insta.svg" alt="instagram"></li>
+        <li> <a href="https://www.instagram.com/someotherwaves/?hl=da"><img src="/svg/insta.svg" alt="instagram"></a></li>
     </ul>
     <div class="burger">
         <div class="line"></div>
@@ -29,7 +29,9 @@ header {
   align-items: center;
   padding: 20px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: var(--neutral);
+  position: sticky;
+  top: 0;
 }
 
 .logo img {
@@ -78,7 +80,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #f00;
+  opacity: 50% !important;
 }
 
 .burger {
@@ -97,8 +99,8 @@ nav {
 .burger {
   display: none;
 }
-/* ----- Moblile ----- */
-@media screen and (max-width: 1000px) {
+/* ----- MOBILE ----- */
+@media screen and (max-width: 800px) {
   .desktop_logo{
     display: none;
   }
