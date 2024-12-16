@@ -71,9 +71,22 @@
     cursor: pointer;
     font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
     color: #f3747b; /* Ændrer farven på pilene */
+    transition: transform 0.3s ease;
   }
 
-  @media (min-width: 600px) {
+  .arrow span.s180grader {
+    transform: rotate(180deg); /* Sørger for, at venstre pil altid peger til venstre */
+  }
+
+  .arrow span:hover {
+    transform: scale(1.5); /* Tilføjer skalering */
+  }
+
+  .arrow span.s180grader:hover {
+    transform: rotate(180deg) scale(1.5); /* Bevarer rotationen og tilføjer skalering */
+  }
+
+  @media (min-width: 800px) {
     .arrow span {
       cursor: pointer;
       font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
@@ -106,23 +119,14 @@
     .div_1-1 p {
       font-size: 20px;
     }
-  }
 
-  .s180grader {
-    transform: rotateY(180deg);
+    .s180grader {
+      transform: rotateY(180deg);
+    }
+    .arrow {
+      margin-bottom: 200px;
+    }
   }
-
-  @media (min-width: 800px) {
-  .arrow {
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    transform: translateY(-50%);
-    margin-bottom: 200px;
-  }
-  
-}
 </style>
 
 <script>

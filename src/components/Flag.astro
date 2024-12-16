@@ -4,9 +4,10 @@
   <h1>Spørgsmål og svar</h1>
   <div class="faq_content">
     <p>
-      <b>Hvilken maling maler I med?</b><br />
-      Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
+      <b>Kan man have indflydelse på farver og de motiver I maler?</b><br />
+      Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.
     </p>
+
 
     <p>
       <b>Maler I i hele Danmark?</b><br />
@@ -43,9 +44,9 @@
       Du skal kontakte os 1-2 måneder før, så vi kan sætte en dato til af til dig.
     </p>
 
-    <p>
-      <b>Kan man have indflydelse på farver og de motiver I maler?</b><br />
-      Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.
+     <p>
+      <b>Hvilken maling maler I med?</b><br />
+      Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
     </p>
   </div>
 </div>
@@ -62,7 +63,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
+    width: 100%;
     height: 120%;
     object-fit: cover;
     z-index: -1;
@@ -73,7 +74,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 1850px;
+    height: 1600px; /* ændret fra 1850 */
     object-fit: cover;
     z-index: -1;
     overflow: visible;
@@ -89,7 +90,7 @@
   .faq_content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -97,6 +98,7 @@
   .faq_content p {
     padding: 15px;
     border-radius: 8px;
+    text-align: left;
   }
   @media (max-width: 800px) {
     .faq_background {
@@ -106,6 +108,7 @@
   @media (min-width: 800px) {
     .faq_content {
       grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
     }
 
     h1 {

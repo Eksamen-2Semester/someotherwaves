@@ -13,13 +13,15 @@ import Flag from "../components/Flag.astro";
   </video>
 
   <h1 class="display">Some Other Waves</h1>
-  <p class="catchphrase"><b>- evighedskunst i dit hjem -</b></p>
+  <div>
+    <p class="catchphrase"><b>- evighedskunst i dit hjem -</b></p>
+  </div>
 
   <div class="grid_2">
     <div class="text-content">
       <h1>Om os</h1>
       <p>Hej! Vi hedder Carla og Bjørk, og er et tvillingepar som i 2022 startede med at skabe væg- og loftmalerier under navnet Some Other Waves. Vi laver evighedskunst - en måde at kombinere vores univers med en bæredygtighed der varer hele livet. Havet og dens uendelige mængde af former og farver er vores inspiration, hvilket præger alle vores motiver. <br /> Vi er klar på at male din stue, din gang, din butiksdisk og alt der ligger imellem!</p>
-      <Button><a href="/omos">Læs mere </a></Button>
+      <div class="center"><Button><a href="/omos">Læs mere </a></Button></div>
     </div>
     <div>
       <img class="forsidebillede" src="img/other/portrait_03.webp" alt="CarlaxBjørk" />
@@ -77,18 +79,24 @@ import Flag from "../components/Flag.astro";
     position: relative;
     left: 0;
     top: 40px;
-    scale: 1.3; /* Fjern unødvendig skalering */
-    width: 100%; /* Sørger for, at videoen fylder skærmen */
+    scale: 1.3;
+    width: 100%;
     height: auto; /* Bevarer proportionerne */
     overflow: hidden;
   }
-  h1 {
-    z-index: 2;
+
+  .display {
   }
+
   h1 {
     text-align: center;
-    z-index: 10;
     position: relative;
+    z-index: 2;
+  }
+
+  .center {
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   p {
@@ -103,8 +111,10 @@ import Flag from "../components/Flag.astro";
     margin-bottom: 30px;
   }
   .catchphrase {
+    margin-top: -20px;
     text-align: center;
-    margin: 0 auto;
+    font-size: 18px;
+    font-style: italic;
   }
 
   .forsidebillede {
@@ -254,7 +264,7 @@ import Flag from "../components/Flag.astro";
     .grafik {
       display: block;
       filter: brightness(100%) !important;
-      scale: 70%;
+      scale: 65%;
       overflow: visible;
     }
 
@@ -277,6 +287,15 @@ import Flag from "../components/Flag.astro";
 
     .brands {
       margin-top: 10px;
+    }
+
+    .catchphrase {
+      text-align: center;
+      font-size: 35px;
+      max-width: 100%;
+      font-style: italic;
+      margin-top: -50px;
+      margin-bottom: 30px;
     }
   }
 </style>

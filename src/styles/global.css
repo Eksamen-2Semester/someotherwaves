@@ -29,7 +29,7 @@ h1 {
   font-size: 36px;
   color: var(--purple);
   margin: 30px;
-  margin-top: 150px;
+  margin-top: 75px;
 }
 
 h2 {
@@ -73,7 +73,7 @@ main {
 }
 
 /* ----- Desktop Verions ----- */
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .display {
     font-size: 115px;
   }
@@ -81,6 +81,7 @@ main {
   h1 {
     font-size: 80px;
     font-weight: 100;
+    margin-top: 150px;
   }
   h2 {
     font-size: 48px;
