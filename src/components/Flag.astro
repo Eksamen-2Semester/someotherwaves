@@ -51,11 +51,11 @@
 </div>
 <style>
   .faq_grid {
-    position: relative; /* Nødvendig for at placere billedet relativt til containeren */
+    position: relative;
     margin-top: 90px;
     margin-bottom: 10px;
     padding: 80px 20px;
-    text-align: center; /* Centrerer teksten */
+    text-align: center;
   }
 
   .faq_background {
@@ -65,7 +65,7 @@
     width: 120%;
     height: 120%;
     object-fit: cover;
-    z-index: -1; /* Sørger for, at billedet er bag teksten */
+    z-index: -1;
     overflow: visible;
     top: -150px;
   }
@@ -73,12 +73,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
-    height: 110%;
+    width: 400px;
+    height: 1950px;
     object-fit: cover;
-    z-index: -1; /* Sørger for, at billedet er bag teksten */
+    z-index: -1;
     overflow: visible;
-    top: -50px;
+    top: -150px;
+    left: -17%;
   }
 
   h1 {
@@ -88,7 +89,7 @@
 
   .faq_content {
     display: grid;
-    grid-template-columns: 1fr; /* Standard: én kolonne */
+    grid-template-columns: 1fr;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -103,13 +104,13 @@
       display: none;
     }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     .faq_content {
-      grid-template-columns: 1fr 1fr 1fr; /* Grid med tre kolonner på desktop */
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     h1 {
-      grid-column: span 3; /* Sikrer, at overskriften fylder hele bredden */
+      grid-column: span 3;
     }
     .faq_background_mobil {
       display: none;

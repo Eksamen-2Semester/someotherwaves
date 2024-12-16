@@ -7,8 +7,8 @@ import Flag from "../components/Flag.astro";
 
 <Layout>
   <video muted autoplay>
-    <source src="video/Alpha_hero-hevc-safari.mp4" type="video/mp4; codecs=hvc1" />
-    <source src="video/Alpha_hero-vp9-chrome.webm" type="video/webm" />
+    <source src="img/video/Alpha_hero-hevc-safari.mp4" type="video/mp4; codecs=hvc1" />
+    <source src="img/video/Alpha_hero-vp9-chrome.webm" type="video/webm" />
   </video>
 
   <h1 class="display">Some Other Waves</h1>
@@ -101,6 +101,15 @@ import Flag from "../components/Flag.astro";
 </Layout>
 
 <style>
+  video {
+    position: relative;
+    left: 0;
+    top: 40px;
+    scale: 1.3; /* Fjern unødvendig skalering */
+    width: 100%; /* Sørger for, at videoen fylder skærmen */
+    height: auto; /* Bevarer proportionerne */
+    overflow: hidden;
+  }
   h1 {
     text-align: center;
   }
@@ -238,10 +247,19 @@ import Flag from "../components/Flag.astro";
   .slide {
     width: auto;
   }
-
   /* Desktop */
 
   @media (min-width: 1000px) {
+    video {
+      position: relative;
+      left: 0;
+      top: 25px;
+      scale: 1.25; /* Fjern unødvendig skalering */
+      width: 100%; /* Sørger for, at videoen fylder skærmen */
+      height: auto; /* Bevarer proportionerne */
+      overflow: hidden;
+      max-width: 100%;
+    }
     .grid_2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
