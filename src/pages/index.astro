@@ -5,6 +5,11 @@ import Review from "../components/Review.astro";
 ---
 
 <Layout>
+  <video muted autoplay>
+    <source src= "video/Alpha_hero-hevc-safari.mp4" type="video/mp4; codecs=hvc1" />
+    <source src= "video/Alpha_hero-vp9-chrome.webm" type="video/webm" />
+  </video>
+
   <h1 class="display">Some Other Waves</h1>
   <p class="catchphrase"><b>- evighedskunst i dit hjem -</b></p>
 
@@ -309,7 +314,7 @@ import Review from "../components/Review.astro";
     .forsidebillede {
       display: block;
       width: 100%;
-margin-top: 30%;
+      margin-top: 30%;
     }
 
     .text-content h1 {
@@ -389,6 +394,5 @@ margin-top: 30%;
 
   .slide-track {
     animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
-   
   }
 </style>
