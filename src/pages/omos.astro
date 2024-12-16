@@ -4,8 +4,8 @@ import Button from "../components/Button.astro";
 ---
 
 <Layout>
-  <main>
-    <h1>Om os</h1>
+  <h1>Om os</h1>
+  <div class="width">
     <img src="/img/other/portrait_01.webp" alt="" />
     <div class="om_os_indhold1">
       <p class="text"><b>Carla og Bjørk</b> <br /> Havet, menneskekroppe, naturen, nuancer, konkylier, organiske former og øjeblikke. Det er sådan vi beskriver vores kunst aller bedst. Vi hedder Carla og Bjørk Nørremark og er en tvillinge-kunstner duo fra København. Siden vi var små og tilbragte utallige somre ved stranden på at samle forstenede søpindsvin og smukke skaller har vi draget stor inspiration fra havet og dens finurlige former. Vi startede Some Other Waves for at få udlevet en drøm om at leve af kunsten, passionen og samværet mellem os. I 2019 malede vi på stofnet for at afprøve virksomhedslivet, men skiftede allerede i 2022 efter en pause til den evighedskunst som vi tilbyder nu.</p>
@@ -16,7 +16,7 @@ import Button from "../components/Button.astro";
       <img src="/public/img/wall/wall_13.webp" alt="" />
     </div>
     <Button>Se galleri</Button>
-  </main>
+  </div>
 </Layout>
 
 <style>
@@ -30,16 +30,14 @@ import Button from "../components/Button.astro";
     border-radius: 15px;
     margin-bottom: 25px;
   }
-  main {
-    width: 75%;
-    margin: auto;
-  }
+
   p {
     margin-bottom: 25px;
   }
   @media (min-width: 1000px) {
-    main {
-      width: 60%;
+    .width {
+      width: 80%;
+      margin: auto;
     }
     .om_os_indhold1 {
       display: grid;
