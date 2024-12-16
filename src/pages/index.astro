@@ -57,8 +57,9 @@ import Flag from "../components/Flag.astro";
     <img class="grafikstjerne" src="svg/starfish.svg" alt="Grafik - Starfish" />
     <h1>Drømmer du om et evighedskunstværk?</h1>
     <p class="p2">Vi stræber efter at skabe kunst som man kan nyde i lang tid og som kan blive en del af ens hverdag. I stedet for at male på lærreder, valgte vi derfor væggen og selve hjemmet som vores udtryksmiddel for vores kunst. At være omgivet af kunst hver dag er noget af det skønneste for os, og det vil vi gerne give videre. <br /> Hvis du har ledt efter en måde at gøre dit hjem mere personligt, farverigt og inspirerende, kan vores væg- og loftmalerier være den perfekte løsning for dig!</p>
-
-    <Button> <a href="/bestillingsguide">Se guiden </a></Button>
+    <div class="center">
+      <Button> <a href="/bestillingsguide">Se guiden </a></Button>
+    </div>
   </div>
 
   <Review />
@@ -395,7 +396,6 @@ import Flag from "../components/Flag.astro";
 
     .slide-track {
       animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
-
     }
     .faq_grid {
       display: grid;
@@ -408,7 +408,6 @@ import Flag from "../components/Flag.astro";
       background-repeat: no-repeat;
       margin: 0;
       overflow: visible;
-      
     }
   }
 </style>

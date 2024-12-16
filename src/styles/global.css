@@ -52,6 +52,13 @@ a {
   text-decoration: none !important;
   color: white;
 }
+a:hover {
+  color: var(--red);
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
 
 img {
   display: block;
