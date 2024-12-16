@@ -1,58 +1,117 @@
 <div class="faq_grid">
+  <img class="faq_background" src="/public/svg/faq_desktop.svg" alt="flag" />
+  <img class="faq_background_mobil" src="/public/svg/faqmobil.svg" alt="flag" />
   <h1>Spørgsmål og svar</h1>
+  <div class="faq_content">
+    <p>
+      <b>Hvilken maling maler I med?</b><br />
+      Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
+    </p>
 
-  <p>
-    <b>Hvilken maling maler I med?</b><br />
-    Vi maler med acryl-vægmaling fra Beck & Jørgensen med EU Ecolabel.
-  </p>
+    <p>
+      <b>Maler I i hele Danmark?</b><br />
+      Ja, vi tager offentlig transport rundt i hele landet og transportudgifterne kommer oveni den samlede pris. Vi køber de billigste billetter.
+    </p>
 
-  <p>
-    <b>Maler I i hele Danmark?</b><br />
-    Ja, vi tager offentlig transport rundt i hele landet og transportudgifterne kommer oveni den samlede pris. Vi køber de billigste billetter.
-  </p>
+    <p>
+      <b>Hvad gør I for at være bæredygtige?</b><br />
+      Vi maler kun på overflader allerede eksisterer, så vores kunst lever længst tid muligt. Derudover maler vi med maling som er certificeret som har mindst mulig belastning på naturen.
+    </p>
 
-  <p>
-    <b>Hvad gør I for at være bæredygtige?</b><br />
-    Vi maler kun på overflader allerede eksisterer, så vores kunst lever længst tid muligt. Derudover maler vi med maling som er certificeret som har mindst mulig belastning på naturen.
-  </p>
+    <p>
+      <b>Kan man selv vælge baggrundsfarve?</b><br />
+      Hvis du ønsker en bestemt baggrundsfarve, skal du selv have malet overfladen, inden vi kommer.
+    </p>
 
-  <p>
-    <b>Kan man selv vælge baggrundsfarve?</b><br />
-    Hvis du ønsker en bestemt baggrundsfarve, skal du selv have malet overfladen, inden vi kommer.
-  </p>
+    <p>
+      <b>Hvad skal jeg have klar inden I kommer?</b><br />
+      Du skal have dækket gulvet af omkring det sted vi skal male og sørget for stiger/evt. stillads.
+    </p>
 
-  <p>
-    <b>Hvad skal jeg have klar inden I kommer?</b><br />
-    Du skal have dækket gulvet af omkring det sted vi skal male og sørget for stiger/evt. stillads.
-  </p>
+    <p>
+      <b>Hvem sørger for materialer?</b><br />
+      Det gør vi selv. Vi medbringer selv maling og pensler.
+    </p>
 
-  <p>
-    <b>Hvem sørger for materialer?</b><br />
-    Det gør vi selv. Vi medbringer selv maling og pensler.
-  </p>
+    <p>
+      <b>Maler I også udendørs?</b><br />
+      Nej, vi maler i øjeblikket ikke udendørs evighedskunstværker.
+    </p>
 
-  <p><b>Maler I også udendørs?</b><br />Nej, vi maler i øjeblikket ikke udendørs evighedskunstværker.</p>
+    <p>
+      <b>Hvor lang ventetid er der?</b><br />
+      Du skal kontakte os 1-2 måneder før, så vi kan sætte en dato til af til dig.
+    </p>
 
-  <p>
-    <b>Hvor lang ventetid er der?</b><br />
-    Du skal kontakte os 1-2 måneder før, så vi kan sætte en dato til af til dig.
-  </p>
-  <p><b>Kan man have indflydelse på farver og de motiver I maler?</b><br />Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.</p>
+    <p>
+      <b>Kan man have indflydelse på farver og de motiver I maler?</b><br />
+      Du kan sagtens få indflydelse på farvevalg. Hav gerne nogle screenshots af tidligere værker vi har malet klar til når vi kommer. Vi maler kun motiver inde for vores motivverden af menneskekroppe, haveelementer og organiske former. Dialog om farver sker på selve male-dagen.
+    </p>
+  </div>
 </div>
-<img src="/public/svg/faq" alt="" />
 <style>
-  .faq_grid p {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    max-width: 300px;
-  }
   .faq_grid {
+    position: relative; /* Nødvendig for at placere billedet relativt til containeren */
     margin-top: 90px;
     margin-bottom: 10px;
-    background-image: url("svg/faqmobil.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 240px 0;
+    padding: 80px 20px;
+    text-align: center; /* Centrerer teksten */
+  }
+
+  .faq_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    z-index: -1; /* Sørger for, at billedet er bag teksten */
+    overflow: visible;
+    top: -150px;
+  }
+  .faq_background_mobil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1; /* Sørger for, at billedet er bag teksten */
+    overflow: visible;
+    top: -50px;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .faq_content {
+    display: grid;
+    grid-template-columns: 1fr; /* Standard: én kolonne */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .faq_content p {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  @media (max-width: 1000px) {
+    .faq_background {
+      display: none;
+    }
+  }
+  @media (min-width: 1000px) {
+    .faq_content {
+      grid-template-columns: 1fr 1fr 1fr; /* Grid med tre kolonner på desktop */
+    }
+
+    h1 {
+      grid-column: span 3; /* Sikrer, at overskriften fylder hele bredden */
+    }
+    .faq_background_mobil {
+      display: none;
+    }
   }
 </style>
