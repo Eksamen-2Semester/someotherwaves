@@ -58,7 +58,7 @@ import Flag from "../components/Flag.astro";
 
   <div class="dromme">
     <img class="grafikstjerne" src="svg/starfish.svg" alt="Grafik - Starfish" />
-    <h1>Drømmer du om et evighedskunstværk?</h1>
+    <h1 class="drommetekst">Drømmer du om et evighedskunstværk?</h1>
     <p class="p2">Vi stræber efter at skabe kunst, som man kan nyde i lang tid og som kan blive en del af ens hverdag. I stedet for at male på lærreder valgte vi derfor væggen og selve hjemmet som vores udtryksmiddel for kunsten. At være omgivet af kunst hver dag er noget af det skønneste for os, og det vil vi gerne give videre. Hvis du har ledt efter en måde at gøre dit hjem mere personligt, farverigt og inspirerende på, kan vores væg- og loftmalerier være den perfekte løsning for dig!</p>
     <div class="center">
       <Button> <a href="/bestillingsguide">Se guiden </a></Button>
@@ -183,8 +183,6 @@ import Flag from "../components/Flag.astro";
     border-radius: 15px;
   }
 
-
-
   /* Desktop */
 
   @media (min-width: 800px) {
@@ -196,9 +194,10 @@ import Flag from "../components/Flag.astro";
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       align-items: center;
-      margin: auto;
+      margin: 0 auto;
       width: 60%;
       margin-bottom: 200px;
+      margin-top: 200px;
     }
 
     .grid_2 h1 {
@@ -213,8 +212,7 @@ import Flag from "../components/Flag.astro";
 
     .forsidebillede {
       display: block;
-      width: 100%;
-      margin-top: 30%;
+      width: 105%;
       margin-left: 20px;
     }
 
@@ -269,8 +267,16 @@ import Flag from "../components/Flag.astro";
       pointer-events: none; /* Forhindrer teksten i at blokere klik */
     }
 
+    .drommetekst {
+      text-align: left;
+      margin-left: auto;
+    }
     .dromme {
-      margin-bottom: 200px;
+      width: auto;
+      max-width: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
 
     .grafik {
@@ -292,7 +298,8 @@ import Flag from "../components/Flag.astro";
     }
 
     .p2 {
-      max-width: 800px;
+      max-width: 100%;
+
     }
 
     .brands {
