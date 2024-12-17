@@ -3,32 +3,38 @@ const { data } = Astro.props;
 ---
 
 <article data-filter={data.category} class={`${data.class} ${data.category} test`}>
-    <img src={data.image}  alt="">
+  <img src={data.image} alt="" />
 </article>
 
 <style>
-*{
-  margin: 0;
-  padding: 0;
-}
-.hidden{
-  display: none;
-}
-img {
-  width: 150px;
-  display: block;
-  border-radius: 15px;
-  transition-duration: .2s;
-}
-img:hover{
-  opacity: 0.7;
-}
-
-    /* ----- Desktop ----- */
-    @media screen and (min-width: 1000px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .hidden {
+    display: none;
+  }
   img {
-  min-width: 344px;
+    width: 100px;
+    display: block;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    object-fit: cover;
+    height: 150px;
+  }
+  img:hover {
+    opacity: 0.7;
   }
 
-}
+  /* ----- Desktop ----- */
+  @media screen and (min-width: 1000px) {
+    img {
+      width: 344px;
+      display: block;
+      border-radius: 15px;
+      transition-duration: 0.2s;
+      object-fit: cover;
+      height: 475px;
+    }
+  }
 </style>
