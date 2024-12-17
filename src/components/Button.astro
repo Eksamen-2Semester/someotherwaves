@@ -1,11 +1,12 @@
 ---
 // Definerer href som en prop
 export const href = "/";
+const { link } = Astro.props;
 ---
 
-<button class="button">
+<a class="button" href={link}>
   <slot />
-</button>
+</a>
 
 <style>
   .button {
