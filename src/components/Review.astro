@@ -14,10 +14,15 @@
       <p><i>"Kæmpe anbefaling herfra! Super nem process med at få de skønne piger ud i vores sommerhus og få frisket de gamle vægge lidt op."</i></p>
     </div>
   </div>
+
   <div class="arrow">
     <span id="leftArrow" class="material-symbols-outlined s180grader"> chevron_right </span>
     <span id="rightArrow" class="material-symbols-outlined"> chevron_right </span>
   </div>
+</div>
+<div class="arrowPC">
+  <span id="leftArrowPC" class="material-symbols-outlined s180grader"> chevron_right </span>
+  <span id="rightArrowPC" class="material-symbols-outlined"> chevron_right </span>
 </div>
 
 <style>
@@ -72,21 +77,45 @@
     color: #f3747b; /* Ændrer farven på pilene */
     transition: transform 0.3s ease;
   }
+  .arrowPC span {
+    cursor: pointer;
+    font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
+    color: #f3747b; /* Ændrer farven på pilene */
+    transition: transform 0.3s ease;
+  }
 
   .arrow span.s180grader {
     transform: rotate(180deg); /* Sørger for, at venstre pil altid peger til venstre */
   }
+  .arrowPC span.s180grader {
+    transform: rotate(180deg); /* Sørger for, at venstre pil altid peger til venstre */
+  }
 
-  .arrow span:hover {
+  .arrowPC span:hover {
     transform: scale(1.5); /* Tilføjer skalering */
   }
 
-  .arrow span.s180grader:hover {
+  .arrowPC span.s180grader:hover {
     transform: rotate(180deg) scale(1.5); /* Bevarer rotationen og tilføjer skalering */
+  }
+  @media (max-width: 800px) {
+    .arrowPC {
+      display: none;
+    }
   }
 
   @media (min-width: 800px) {
-    .arrow span {
+    .arrowPC {
+      position: absolute;
+      width: 75%;
+      overflow: visible;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-900%);
+      z-index: 3;
+    }
+
+    .arrowPC span {
       cursor: pointer;
       font-size: 40px; /* Sikrer, at ikonerne er tilpas store */
       color: #f3747b; /* Ændrer farven på pilene */
@@ -100,6 +129,7 @@
       max-width: 1000px;
 
       margin: 0 auto;
+      margin-bottom: 150px;
     }
 
     .div_1-1 {
@@ -124,7 +154,7 @@
       transform: rotateY(180deg);
     }
     .arrow {
-      margin-bottom: 200px;
+      display: none;
     }
   }
 </style>
@@ -134,6 +164,8 @@
   const divContainer = document.querySelector(".div-container");
   const leftArrow = document.getElementById("leftArrow");
   const rightArrow = document.getElementById("rightArrow");
+  const leftArrowPC = document.getElementById("leftArrowPC");
+  const rightArrowPC = document.getElementById("rightArrowPC");
   const divs = document.querySelectorAll(".div_1-1");
 
   // Variabler
@@ -151,8 +183,16 @@
     currentIndex = (currentIndex - 1 + totalDivs) % totalDivs; // Gå til forrige
     updateBanner();
   });
+  leftArrowPC.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalDivs) % totalDivs; // Gå til forrige
+    updateBanner();
+  });
 
   rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalDivs; // Gå til næste
+    updateBanner();
+  });
+  rightArrowPC.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % totalDivs; // Gå til næste
     updateBanner();
   });
