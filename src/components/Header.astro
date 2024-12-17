@@ -10,7 +10,7 @@
         <li><a href="/galleri">Galleri</a></li>
         <li><a href="/omos">Om os</a></li>
         <li><a href="/bestillingsguide">Bestillingsguide</a></li>
-        <li> <a href="https://www.instagram.com/someotherwaves/?hl=da"><img src="/svg/insta.svg" alt="instagram"></a></li>
+        <li> <a href="https://www.instagram.com/someotherwaves/?hl=da" target="_blank"><img src="/svg/insta.svg" alt="instagram"></a></li>
     </ul>
     <div class="burger">
         <div class="line"></div>
@@ -30,8 +30,10 @@ header {
   padding: 20px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   background-color: var(--neutral);
-  position: sticky;
+  position: fixed;
+  width: 97%;
   top: 0;
+  z-index: 10;
 }
 
 .logo img {

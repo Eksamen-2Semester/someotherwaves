@@ -2,8 +2,8 @@
 const { data } = Astro.props;
 ---
 
-<article>
-    <img class={`${data.category} ${data.class} test`} src={data.image} alt="">
+<article data-filter={data.category} class={`${data.class} ${data.category} test`}>
+    <img src={data.image}  alt="">
 </article>
 
 <style>
@@ -11,10 +11,17 @@ const { data } = Astro.props;
   margin: 0;
   padding: 0;
 }
+.hidden{
+  display: none;
+}
 img {
   width: 150px;
   display: block;
   border-radius: 15px;
+  transition-duration: .2s;
+}
+img:hover{
+  opacity: 0.7;
 }
 
     /* ----- Desktop ----- */

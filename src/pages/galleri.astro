@@ -16,11 +16,17 @@ const data = await fetch(url, {
     <section>
         <h1>Galleri</h1>
         <div id="btn_container">
-            <button class="btn active" onclick="filterSelection('all')"> Alle</button>
+            <button class="btn active" data-filter="all">Alle</button>
+            <button class="btn" data-filter=wall>Væg</button>
+            <button class="btn" data-filter=ceiling>Loft</button>
+            <button class="btn" data-filter=collabs>Sammarbejde</button>
+            <button class="btn" data-filter=products>Produkter</button>
+
+            <!-- <button class="btn active" onclick="filterSelection('all')"> Alle</button>
             <button class="btn" onclick="filterSelection('wall')">Væg</button>
             <button class="btn" onclick="filterSelection('ceiling')">Loft</button>
             <button class="btn" onclick="filterSelection('collabs')">Sammarbejde</button>
-            <button class="btn" onclick="filterSelection('products')">Produkter</button>
+            <button class="btn" onclick="filterSelection('products')">Produkter</button> -->
         </div>
         <div class="galleri">
             {
@@ -31,55 +37,69 @@ const data = await fetch(url, {
             <h2>Drømmer du om et<br>evighedskunstværk?</h2>
             <Button><a href="/bestillingsguide">Se guiden</a></Button>
         </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
     </section>
 </Layout>
 
 
 <script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    // Get all the buttons and pics
+    const images = document.querySelectorAll(".column");
+    const buttons = document.querySelectorAll(".btn");
+    // Adds event listener to buttons then refers it to filter function
+    buttons.forEach(column=>column.addEventListener("click", filtrer));
+
+    function filtrer(){
+    document.querySelector(".active").classList.remove("active");
+    this.classList.add("active");
+    
+    images.forEach(elm=>{
+      if(elm.dataset.filter == this.dataset.filter || this.dataset.filter == "all"){
+        elm.classList.remove("hidden");
+      }else{
+        elm.classList.add("hidden");
       }
+    })
+      // Add active class to the current button (highlight it)
+    //   var btnContainer = document.getElementById("btn_container");
+    // var btns = btnContainer.getElementsByClassName("btn");
+    // for (var i = 0; i < btns.length; i++) {
+    //   btns[i].addEventListener("click", function(){
+    //     var current = document.getElementsByClassName("active");
+    //     current[0].className = current[0].className.replace(" active", "");
+    //     this.className += " active";
+    //   });
+    // }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
     }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
     }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("btn_container");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    </script>
+  }
+</script>
 
 
 <style>
@@ -87,7 +107,11 @@ const data = await fetch(url, {
     width: 100% !important;
 }
 h1{
-    margin: 30px;
+    /* margin: 30px; */
+    margin-top: 150px;
+}
+.hidden{
+    display: none;
 }
  section{
     display: flex;
@@ -134,6 +158,68 @@ h2{
     align-items: center;
     margin-bottom: 100px;
 }
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 
 /* ----- Desktop ----- */
 @media screen and (min-width: 1000px) {
