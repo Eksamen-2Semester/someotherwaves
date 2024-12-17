@@ -19,7 +19,7 @@ import Flag from "../components/Flag.astro";
 
   <div class="grid_2">
     <div class="text-content">
-      <h1>Om os</h1>
+      <h1 class="h11">Om os</h1>
       <p>Hej! Vi hedder Carla og Bjørk, og er et tvillingepar som i 2022 startede med at skabe væg- og loftmalerier under navnet Some Other Waves. Vi laver evighedskunst - en måde at kombinere vores univers med en bæredygtighed der varer hele livet. Havet og dens uendelige mængde af former og farver er vores inspiration, hvilket præger alle vores motiver. <br /> Vi er klar på at male din stue, din gang, din butiksdisk og alt der ligger imellem!</p>
       <div class="center1"><Button link="/omos">Læs mere</Button></div>
     </div>
@@ -75,10 +75,14 @@ import Flag from "../components/Flag.astro";
 </Layout>
 
 <style>
+
+.display {
+margin: 30px;
+
+}
   video {
     position: relative;
     left: 0;
-    top: 70px;
     scale: 1.3;
     width: 100%;
     height: auto; /* Bevarer proportionerne */
@@ -102,6 +106,7 @@ import Flag from "../components/Flag.astro";
   }
 
   .center {
+    margin-top: 150px;
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -187,6 +192,9 @@ import Flag from "../components/Flag.astro";
   /* Desktop */
 
   @media (min-width: 800px) {
+    video {
+      top: 70px;
+    }
     .center1 {
       float: left;
     }
@@ -300,7 +308,6 @@ import Flag from "../components/Flag.astro";
 
     .p2 {
       max-width: 100%;
-
     }
 
     .brands {
