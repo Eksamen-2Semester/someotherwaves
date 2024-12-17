@@ -52,7 +52,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-100%));
+      transform: translateX(calc(-500%));
     }
   }
 
@@ -86,21 +86,38 @@
 
   .slide-track {
     display: flex;
-    animation: scroll 10s linear infinite; /* Hurtigere bevægelse */
-    gap: 70px;
+    animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
+    gap: 20px;
   }
 
   .slide {
     width: auto;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
+    img {
+      margin-top: 40px;
+      width: auto;
+      border-radius: 0%;
+    }
+
     .slide-track {
       animation: scroll 40s linear infinite; /* Hurtigere bevægelse */
+      gap: 70px;
     }
 
     .slider-container {
       margin-bottom: 350px;
+    }
+
+    /* Animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100%));
+      }
     }
   }
 </style>
