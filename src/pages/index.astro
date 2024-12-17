@@ -220,6 +220,7 @@ import Flag from "../components/Flag.astro";
     .gallerigrid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 300px); /* Reducér højden på rækkerne */
       gap: 15px;
       margin: 0 auto;
       margin-bottom: 200px;
@@ -233,7 +234,7 @@ import Flag from "../components/Flag.astro";
 
     .gallerigrid img {
       width: 100%;
-      height: 100%;
+      height: 100%; /* Sørg for, at billedet fylder hele cellen */
       object-fit: cover;
       transition:
         transform 0.3s ease,
