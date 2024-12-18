@@ -7,9 +7,9 @@
   </div>
   <nav>
     <ul class="menu">
-      <li><a href="/galleri">Galleri</a></li>
-      <li><a href="/omos">Om os</a></li>
-      <li><a href="/bestillingsguide">Bestillingsguide</a></li>
+      <li class="galleri"><a href="/galleri">Galleri</a></li>
+      <li class="omos"><a href="/omos">Om os</a></li>
+      <li class="bestill"><a href="/bestillingsguide">Bestillingsguide</a></li>
       <li><a href="https://www.instagram.com/someotherwaves/?hl=da" target="_blank" target="_blank"><img src="/svg/insta.svg" alt="Instagram" /></a></li>
     </ul>
     <div class="burger">
@@ -22,6 +22,22 @@
 
 <script src="/src/scripts/menu.js"></script>
 <script src="/src/scripts/dropshadow.js"></script>
+<script>
+  const pathName = window.location.pathname;
+  const pageName = pathName.split("/").pop();
+
+  if(pageName === "galleri"){
+      document.querySelector(".galleri").classList.add("activeLink")
+  }
+  if(pageName === "omos"){
+      document.querySelector(".omos").classList.add("activeLink")
+  }
+  if(pageName === "bestillingsguide"){
+      document.querySelector(".bestill").classList.add("activeLink")
+  }
+  
+
+</script>
 <style>
   header {
     display: flex;
@@ -100,6 +116,10 @@
   }
   .burger {
     display: none;
+  }
+  .activeLink a{
+    color: var(--red)!important;
+    text-decoration: underline !important;
   }
   /* ----- MOBILE ----- */
   @media screen and (max-width: 800px) {
