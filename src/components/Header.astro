@@ -24,7 +24,7 @@
 <script src="/src/scripts/dropshadow.js"></script>
 <script>
   const pathName = window.location.pathname;
-  const pageName = pathName.split("/").pop();
+  const pageName = pathName.pop();
 
   if(pageName === "galleri"){
       document.querySelector(".galleri").classList.add("activeLink")
@@ -32,7 +32,7 @@
   if(pageName === "omos"){
       document.querySelector(".omos").classList.add("activeLink")
   }
-  if(pageName === "bestillingsguide"){
+  if(pageName === "https://some-other-waves.netlify.app/bestillingsguide/"){
       document.querySelector(".bestill").classList.add("activeLink")
   }
 </script>
