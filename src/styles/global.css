@@ -45,6 +45,7 @@ p {
   color: var(--purple);
   margin-bottom: 25px;
   font-weight: 350;
+  margin-top: 0px;
 }
 
 a {
