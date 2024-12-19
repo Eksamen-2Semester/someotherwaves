@@ -27,7 +27,7 @@ const data = await fetch(url, {
     </div>
     <div class="cta">
       <h2>Drømmer du om et<br />evighedskunstværk?</h2>
-      <Button><a href="/bestillingsguide">Se guiden</a></Button>
+      <Button link="/bestillingsguide">Se guiden</Button>
     </div>
   </section>
 </Layout>
@@ -59,7 +59,7 @@ const data = await fetch(url, {
   }
   h1 {
     /* margin: 30px; */
-    margin-top: 150px;
+    margin-top: 100px;
   }
   .hidden {
     display: none;
@@ -111,12 +111,16 @@ const data = await fetch(url, {
     margin-bottom: 100px;
   }
   /* ----- Desktop ----- */
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 800px) {
     .btn {
       font-weight: bold;
       font-size: 14px;
       padding: 10px 45px;
       border: 2.5px solid var(--red);
+    }
+
+    h1 {
+      margin-top: 150px;
     }
   }
 </style>
