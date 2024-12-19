@@ -32,16 +32,16 @@ import "../styles/global.css";
   const pathName = window.location.pathname;
   const pageName = pathName.split("/").pop();
 
-  if(pageName === "index"){
+  if(pageName === "/index/"){
       document.querySelector("title").innerHTML = "Some Other Waves";
   }
-  if(pageName === "galleri"){
+  if(pageName === "/galleri/"){
       document.querySelector("title").innerHTML = "Galleri";
   }
-  if(pageName === "omos"){
+  if(pageName === "/omos/"){
       document.querySelector("title").innerHTML = "Om os";
   }
-  if(pageName === "bestillingsguide"){
+  if(pageName === "/bestillingsguide/"){
       document.querySelector("title").innerHTML = "Bestillingsguide";
   }
 </script>
